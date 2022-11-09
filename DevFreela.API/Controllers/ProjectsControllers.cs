@@ -7,6 +7,9 @@ namespace DevFreela.API.Controllers
     [Route("api/projects")]
     public class ProjectsControllers: ControllerBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly OpeningTimeOption _option;
         public ProjectsControllers(IOptions<OpeningTimeOption> option)
         {
