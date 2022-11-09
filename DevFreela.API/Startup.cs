@@ -9,8 +9,8 @@ namespace DevFreela.API
         {
             Configuration = configuration;
         }
-        public IConfiguration Configuration { get; set; }
-
+        public IConfiguration Configuration { get;}
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
