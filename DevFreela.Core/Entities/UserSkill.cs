@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Core.Entities
 {
-    internal class UserSkill : BaseEntity
+    public class UserSkill : BaseEntity
     {
         public int IdUser{ get; private set; }
         public int IdSkill{ get; private set; }
