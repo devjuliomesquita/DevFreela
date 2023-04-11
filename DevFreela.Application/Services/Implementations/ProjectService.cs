@@ -48,14 +48,14 @@ namespace DevFreela.Application.Services.Implementations
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 
-            project.Cancel();
+            project!.Cancel();
             _dbContext.SaveChanges();
         }
 
         public void Finish(int id)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-            project.Finish();
+            project!.Finish();
             _dbContext.SaveChanges();
         }
 
@@ -92,14 +92,14 @@ namespace DevFreela.Application.Services.Implementations
         public void Start(int id)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-            project.Start();
+            project!.Start();
             _dbContext.SaveChanges();
         }
 
         public void Update(UpdateProjectInputModel updateProjectInputModel)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == updateProjectInputModel.Id);
-            project.Update(
+            project!.Update(
                 updateProjectInputModel.Title,
                 updateProjectInputModel.Description,
                 updateProjectInputModel.TotalCost
